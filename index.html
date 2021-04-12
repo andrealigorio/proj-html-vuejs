@@ -4,29 +4,87 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Trocchi&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <title>Pet Supplies</title>
 </head>
 <body>
     <header>
-        <div class="header_top">
-
+        <div class="header_top w80">
+            <div class="logo">
+                <img src="img/logo-symbol.png" alt="Logo Pet Supplies">
+                <span>Avada Pet Supplies</span>
+            </div>
+            <div class="search_bar">
+                <button><i class="fas fa-search"></i></button>
+                <input type="text" id="search" placeholder="Search...">
+            </div>
+            <div class="questions">
+                <span class="b600">Questions?</span>
+                <span>Call us : 1.800.123.4567</span>
+            </div>
+            <div class="header_icons">
+                <i class="fas fa-shopping-bag"></i>
+                <i class="far fa-user"></i>
+            </div>
         </div>
         <div class="header_bottom">
-
+            <ul class="nav">
+                <li class="active">Home<i class="fas fa-angle-down"></i></li>
+                <li>Shop<i class="fas fa-angle-down"></i></li>
+                <li>About</li>
+                <li>Blog</li>
+                <li>Contact</li>
+                <li>Shop by brand<i class="fas fa-angle-down"></i></li>
+            </ul>
         </div>
     </header>
     <main>
         <section id="jumbotron">
             <div class="jumbo_top">
-
+                <div class="wrapper_jumbo w80">
+                    <div class="first_text">
+                        <i class="far fa-map"></i>
+                        <span><span class="b600">International </span>Shipping Services</span>
+                    </div>
+                    <div class="second_text">
+                        <i class="far fa-clock"></i>
+                        <span>See our <span class="b600">store hours</span> and services</span>
+                    </div>
+                    <div class="third_text">
+                        <i class="fas fa-check"></i>
+                        <span>We price match to give you the <span class="b600">best deals</span></span>
+                    </div>
+                </div>
             </div>
             <div class="banner">
-
+                <div class="layover"></div>
+                <div class="wrapper_banner w80">
+                    <div class="banner_text">
+                        <span class="b600">FIND THE BEST ANIMAL SUPPLIES</span>
+                        <h1>We know animals are a part of your family, let us help take care of them.</h1>
+                        <button class="btn white">Learn more about us</button>
+                    </div>
+                </div>
             </div>
             <div class="jumbo_bottom">
-
+                <div class="wrapper_jumbo_bottom w70">
+                    <div class="food_img">
+                        <img src="img/food-transparent-5.png" alt="food">
+                    </div>
+                    <div class="jumbo_bottom_text">
+                        <span>Get $25 OFF your first purchase of our homemade pet food!</span>
+                        <a href="#">Visit the shop</a>
+                    </div>
+                </div>
             </div>
         </section>
         <section id="category">
