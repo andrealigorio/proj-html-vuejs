@@ -48,7 +48,7 @@ p {
     left: 0;
 }
 .layover {
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.3);
 }
 .layover_card {
     background-color: rgba(160, 70, 10, 0.3);
@@ -181,7 +181,7 @@ header {
     width: calc(100% / 3);
     text-align: center;
 }
-.jumbo_top i, .jumbo_top span > span, .banner, .new_arrivals_banner {
+.jumbo_top i, .jumbo_top span > span, .banner_text, .new_arrivals_banner {
     color: white;
 }
 .banner {
@@ -193,12 +193,18 @@ header {
     position: relative;
 }
 .wrapper_banner {
+    height: 100%;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
-.banner_text {
+#jumbotron .banner_text {
     width: 50%;
     z-index: 2;
+    text-align: start;
+}
+#jumbotron .wrapper_banner {
+    justify-content: flex-start;
 }
 .banner h1 {
     margin: 40px 0;
@@ -286,6 +292,7 @@ header {
 .food_card:hover {
     transform: scale(1.03);
     background-color: #1f3821;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
     transition: 0.5s;
 }
 .food_card h3 {
@@ -314,13 +321,10 @@ header {
     position: relative;
     margin-bottom: 80px;
 }
-.new_arrivals_banner .wrapper_banner {
-    height: 100%;
-    justify-content: center;
-}
-.new_arrivals_banner .banner_text {
+.banner_text {
     text-align: center;
     width: 100%;
+    z-index: 2;
 }
 .new_arrivals_banner .banner_text h1 {
     margin: 30px 0;
@@ -522,4 +526,60 @@ header {
 }
 .blog_cards .articles_btn {
     text-align: center;
+}
+#popular_accessories {
+    overflow-x: hidden;     /* perchè senza overflow quando si va hover sul banner di destra compare la scroolbar*/
+}
+.accessories_banners {
+    width: 100%;
+    height: 30vw;
+    display: flex;
+    margin-top: 80px;
+}
+.banner_left {
+    background-image: url(../img/banner-8-2x.jpg);
+}
+.banner_right {
+    background-image: url(../img/banner-9-2x.jpg);
+}
+.banner_left, .banner_right {
+    width: 50%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.banner_left:hover, .banner_right:hover {
+    transform: scale(1.03);
+    transition: 0.5s;
+    z-index: 3;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+}
+.accessories_banners h3 {
+    margin: 30px 0;
+}
+.accessories_icons {
+    width: 100%;
+    height: 250px;
+    background-color: #1f3821;
+    background-image: url(../img/bg-transparent-3.png);
+    background-repeat: repeat-x;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.accessories_icons > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.accessories_icons i {
+    color: white;
+    font-size: 300%;
+}
+.accessories_icons span {
+    color: #9ca59d;
+    margin-top: 20px;
 }
