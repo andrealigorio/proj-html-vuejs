@@ -34,6 +34,14 @@ p {
     font-size: 110%;
     line-height: 30px;
 }
+.center {
+    text-align: center;
+}
+.text_green {
+    color: #3d6f42;
+    font-weight: 500;
+    font-size: 120%;
+}
 .b600 {
     font-weight: 600;
 }
@@ -179,7 +187,6 @@ header {
 }
 .wrapper_jumbo > div {
     width: calc(100% / 3);
-    text-align: center;
 }
 .jumbo_top i, .jumbo_top span > span, .banner_text, .new_arrivals_banner {
     color: white;
@@ -241,9 +248,6 @@ header {
 #category {
     padding-top: 80px;
 }
-.category_text {
-    text-align: center;
-}
 .category_text h3 {
     margin: 20px 0;
 }
@@ -285,7 +289,6 @@ header {
     width: calc(100% / 3 - 10px);
     margin: 0 5px;
     padding: 80px;
-    text-align: center;
     cursor: pointer;
     transition: 0.5s;
 }
@@ -350,12 +353,14 @@ header {
     margin-top: 20px;
 }
 .item_card {
-    width: calc(100% / 4 - 20px);
-    margin: 0 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
     cursor: pointer;
+}
+.items_cards_bottom .item_card {
+    width: calc(100% / 4 - 20px);
+    margin: 0 10px;
 }
 .item_card_img {
     position: relative;
@@ -388,7 +393,7 @@ header {
     display: block;
 }
 .description {
-    margin: 10px 0;
+    margin: 15px 0;
     transition: 0.3s;
     cursor: pointer;
 }
@@ -416,7 +421,6 @@ header {
     padding: 100px 0;
 }
 #testimonials h2 {
-    text-align: center;
     font-size: 250%;
 }
 .wrapper_testimonials {
@@ -429,7 +433,6 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
     padding: 0 20px;
 }
 .user_img {
@@ -472,9 +475,6 @@ header {
     padding: 15px;
     width: 40%;
     margin-right: 20px;
-}
-.blog_cards_text {
-    text-align: center;
 }
 .blog_cards_text h3 {
     margin-bottom: 20px;
@@ -523,9 +523,6 @@ header {
 }
 .blog_text span, .text_layover_card span {
     font-size: 80%;
-}
-.blog_cards .articles_btn {
-    text-align: center;
 }
 #popular_accessories {
     overflow-x: hidden;     /* perchè senza overflow quando si va hover sul banner di destra compare la scroolbar*/
@@ -582,4 +579,19 @@ header {
 .accessories_icons span {
     color: #9ca59d;
     margin-top: 20px;
+}
+#new_products {
+    padding: 80px 0;
+}
+.new_products_text h3 {
+    margin-bottom: 20px;
+}
+.new_products_items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.new_products_items .item_card {
+    width: calc(100% / 3 - 20px);
+    margin-top: 50px;
 }
