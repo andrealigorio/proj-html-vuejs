@@ -89,12 +89,22 @@ button:focus, input:focus {
     outline: none;
 }
 /* FINE UTILITY */
+html {
+    scroll-behavior: smooth;
+}
 body {
     font-family: 'Work Sans', sans-serif;
     font-size: 16px;
+    margin-top: 138px;
 }
 header {
     width: 100%;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 6;
+    border-bottom: 1px solid #f2f2f2;
 }
 .header_top {
     height: 76px;
@@ -695,4 +705,62 @@ footer a, footer a:hover, .footer_nav a, .footer_nav a:hover {
     line-height: 80px;
     background-color: black;
     font-size: 80%;
+}
+.help_btn {
+    position: fixed;
+    right: 12px;
+    top: 150px;
+    z-index: 5;
+}
+.demos {
+    margin-bottom: 5px;
+}
+.demos, .on_sale {
+    width: 65px;
+    height: 65px;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    cursor: pointer;
+}
+.demos i {
+    font-size: 160%;
+    margin: 5px 0;
+}
+.demos i, .help_btn span {
+    color: #33475b;
+}
+.help_btn span {
+    font-size: 80%;
+    font-weight: 500;
+}
+.on_sale_price {
+    position: relative;
+    font-size: 180%;
+    font-weight: 600;
+    color: #65bc7b;
+}
+.on_sale_price .fa-dollar-sign {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 50%;
+}
+.chevron_up {
+    background-color: #2e2e2e;
+    width: 50px;
+    height: 35px;
+    border-radius: 5px 5px 0 0;
+    position: fixed;
+    bottom: 0;
+    right: 80px;
+    z-index: 5;
+}
+.chevron_up i {
+    font-size: 150%;
+    line-height: 35px;
+}
+.chevron_up a {
+    color: #e0e0e0;
 }
