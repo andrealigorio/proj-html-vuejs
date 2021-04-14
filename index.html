@@ -21,7 +21,7 @@
         <div id="app">
             <div class="header_top w80">
                 <div class="logo">
-                    <img src="img/dark-pet-logo-2x.png" alt="Logo Pet Supplies">
+                    <img :src="'img/' + header.logo" alt="Logo Pet Supplies">
                 </div>
                 <div class="search_bar">
                     <button><i class="fas fa-search"></i></button>
@@ -29,21 +29,15 @@
                 </div>
                 <div class="questions">
                     <span class="b600">Questions?</span>
-                    <span>Call us : 1.800.123.4567</span>
+                    <span>Call us : {{header.telNumber}} </span>
                 </div>
                 <div class="header_icons">
-                    <i class="fas fa-shopping-bag"></i>
-                    <i class="far fa-user"></i>
+                    <i v-for="icon in header.icons" :class="'fas fa-' + icon"></i>
                 </div>
             </div>
             <div class="header_bottom">
                 <ul class="nav">
-                    <li class="active">Home<i class="fas fa-angle-down"></i></li>
-                    <li>Shop<i class="fas fa-angle-down"></i></li>
-                    <li>About</li>
-                    <li>Blog</li>
-                    <li>Contact</li>
-                    <li>Shop by brand<i class="fas fa-angle-down"></i></li>
+                    <li v-for="(link, index) in header.links" :class="index == selected ? 'active' : null" @click="selected = index">{{link.name}}<i :class="chevronLink(link)"></i></li>
                 </ul>
             </div>
             </header>
