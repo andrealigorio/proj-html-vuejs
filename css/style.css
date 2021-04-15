@@ -48,7 +48,7 @@ p {
 header .nav li.active {
     color: black;
 }
-footer .nav li.active a {
+footer .nav li.active {
     color: white;
 }
 .layover, .layover_card {
@@ -671,6 +671,7 @@ footer a, footer a:hover, .footer_nav a, .footer_nav a:hover {
 }
 .small_newsletter input, .small_newsletter button {
     width: 100%;
+    border: none;
 }
 .small_newsletter input {
     margin-bottom: 30px;
@@ -678,11 +679,10 @@ footer a, footer a:hover, .footer_nav a, .footer_nav a:hover {
 .footer_bottom {
     padding-top: 50px;
 }
-.footer_nav a {
+.footer_nav li {
     color: #9ca59d;
-    text-decoration: none;
 }
-.footer_nav a:hover {
+.footer_nav li:hover {
     color: white;
 }
 .social_icons {

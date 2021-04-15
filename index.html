@@ -37,7 +37,7 @@
             </div>
             <div class="header_bottom">
                 <ul class="nav">
-                    <li v-for="(link, index) in header.links" :class="index == selected ? 'active' : null" @click="selected = index">{{link.name}}<i :class="chevronLink(link)"></i></li>
+                    <li v-for="link in header.links" :class="link.name == selected ? 'active' : null" @click="selected = link.name">{{link.name}}<i :class="chevronLink(link)"></i></li>
                 </ul>
             </div>
         </header>
@@ -267,30 +267,24 @@
             <div class="footer_top w80">
                 <div class="contacts">
                     <div class="footer_logo">
-                        <img src="img/mobile-light-pet-logo-2x.png" alt="">
+                        <img :src="'img/' + footer.logo" alt="Logo Pet Supplies">
                     </div>
                     <div class="info_contacts">
-                        <p class="address">1234 Avada Avenue Avadaville</p>
-                        <p class="email">info@your-company.com</p>
-                        <p class="number_tell">Call us: (1) 234 5678</p>
+                        <p class="address">{{footer.address}}</p>
+                        <p class="email">{{footer.email}}</p>
+                        <p class="number_tell">{{footer.telNumber}}</p>
                     </div>
                 </div>
                 <div class="brand">
                     <h4>Shop by brand</h4>
                     <ul>
-                        <li><a href="">Bed</a></li>
-                        <li><a href="">Food</a></li>
-                        <li><a href="">Toys</a></li>
-                        <li><a href="">Transport</a></li>
+                        <li v-for="link in footer.brandLinks"><a href="">{{link}}</a></li>
                     </ul>
                 </div>
                 <div class="useful">
                     <h4>Useful links</h4>
                     <ul>
-                        <li><a href="">My account</a></li>
-                        <li><a href="">Orders</a></li>
-                        <li><a href="">Checkout</a></li>
-                        <li><a href="">Cart</a></li>
+                        <li v-for="link in footer.usefulLinks"><a href="">{{link}}</a></li>
                     </ul>
                 </div>
                 <div class="small_newsletter">
@@ -304,18 +298,11 @@
             <div class="footer_bottom w80">
                 <div class="footer_nav">
                     <ul class="nav">
-                        <li class="active"><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Contact</a></li>
-                        <li><a href="#">Shop</a></li>
+                        <li v-for="link in footer.navLinks" :class="link == selected ? 'active' : null" @click="selected = link">{{link}}</li>
                     </ul>
                 </div>
                 <div class="social_icons center">
-                    <a href=""><i class="fab fa-facebook-f"></i></a></i>
-                    <a href=""><i class="fab fa-twitter"></i></a></i>
-                    <a href=""><i class="fab fa-instagram"></i></a></i>
-                    <a href=""><i class="fab fa-youtube"></i></a></i>
+                    <a href="" v-for="icon in footer.socialIcons"><i :class="'fab fa-' + icon"></i></a>
                 </div>
             </div>
             <div class="copyrights center">

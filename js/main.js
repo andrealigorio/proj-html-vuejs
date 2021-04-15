@@ -9,27 +9,27 @@ var app = new Vue({
             links: [
                 {
                     name: "Home",
-                    chevron: true,
+                    dropDown: true,
                 },
                 {
                     name: "Shop",
-                    chevron: true,
+                    dropDown: true,
                 },
                 {
                     name: "About",
-                    chevron: false,
+                    dropDown: false,
                 },
                 {
-                    name: "blog",
-                    chevron: false,
+                    name: "Blog",
+                    dropDown: false,
                 },
                 {
                     name: "Contact",
-                    chevron: false,
+                    dropDown: false,
                 },
                 {
                     name: "Shop by brand",
-                    chevron: true,
+                    dropDown: true,
                 }
             ]
         },
@@ -170,11 +170,21 @@ var app = new Vue({
                 price: 16.00
             }
         ],
-        selected: 0,
+        footer: {
+            logo: "mobile-light-pet-logo-2x.png",
+            address: "1234 Avada Avenue Avadaville",
+            email: "info@your-company.com",
+            telNumber: "(1) 234 5678",
+            brandLinks: ["Bed", "Food", "Toys", "Transport"],
+            usefulLinks: ["My account", "Orders", "Checkout", "Cart"],
+            navLinks: ["Home", "About", "Blog", "Contact", "Shop"],
+            socialIcons: ["facebook-f", "twitter", "instagram", "youtube"]
+        },
+        selected: "Home",
     },
     methods: {
         chevronLink(link) {
-            if(link.chevron) {
+            if(link.dropDown) {
                 return "fas fa-angle-down";
             }
         },
