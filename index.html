@@ -40,6 +40,29 @@
                     <li v-for="link in header.links" :class="link.name == selected ? 'active' : null" @click="selected = link.name">{{link.name}}<i :class="chevronLink(link)"></i></li>
                 </ul>
             </div>
+            <div class="tablet">
+                <div class="top">
+                    <div class="logo">
+                        <img :src="'img/' + header.logo" alt="Logo Pet Supplies">
+                    </div>
+                    <i class="fas fa-bars"></i>
+                </div>
+                <div class="middle">
+                    <div class="search_bar">
+                        <button><i class="fas fa-search"></i></button>
+                        <input type="text" id="search" placeholder="Search...">
+                    </div>
+                </div>
+                <div class="bottom">
+                    <div class="questions">
+                        <span class="b600">Questions?</span>
+                        <span>Call us : {{header.telNumber}} </span>
+                    </div>
+                    <div class="header_icons">
+                        <i v-for="icon in header.icons" :class="'fas fa-' + icon"></i>
+                    </div>
+                </div>
+            </div>
         </header>
         <main>
             <section id="jumbotron">
@@ -134,7 +157,7 @@
                                 <div class="layover_card">
                                     <div class="check_cart">
                                         <i class="far fa-check-square"></i>
-                                        <span>VIEW CART</span>
+                                        <span class="center">VIEW CART</span>
                                     </div>
                                 </div>
                                 <img :src="'img/' + item.img" :alt="item.description">
@@ -220,21 +243,25 @@
                     </div>
                 </div>
                 <div class="accessories_icons">
-                    <div class="trick">
-                        <i class="fas fa-truck"></i>
-                        <span>Free worldwide deliveries</span>
+                    <div class="w50">
+                        <div class="trick">
+                            <i class="fas fa-truck"></i>
+                            <span>Free worldwide deliveries</span>
+                        </div>
+                        <div class="map">
+                            <i class="far fa-map"></i>
+                            <span>Find stores near you</span>
+                        </div>
                     </div>
-                    <div class="map">
-                        <i class="far fa-map"></i>
-                        <span>Find stores near you</span>
-                    </div>
-                    <div class="dollar">
-                        <i class="fas fa-dollar-sign"></i>
-                        <span>Best prices guarranteed</span>
-                    </div>
-                    <div class="credit_card">
-                        <i class="far fa-credit-card"></i>
-                        <span>All credit card accepted</span>
+                    <div class="w50">
+                        <div class="dollar">
+                            <i class="fas fa-dollar-sign"></i>
+                            <span>Best prices guarranteed</span>
+                        </div>
+                        <div class="credit_card">
+                            <i class="far fa-credit-card"></i>
+                            <span>All credit card accepted</span>
+                        </div>
                     </div>
                 </div>
             </section>

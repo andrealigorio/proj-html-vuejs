@@ -13,7 +13,10 @@
 .w60 {
     width: 60%;
 }
-.w80, .w70, .w60 {
+.w50 {
+    width: 50%;
+}
+.w80, .w70, .w60, .w50 {
     margin: 0 auto;
     height: 100%;
 }
@@ -178,6 +181,30 @@ header {
 .nav li i {
     margin: 0 5px;
 }
+.tablet {
+    display: none;
+    height: 150px;
+    padding: 10px;
+}
+.tablet .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.tablet .top i {
+    font-size: 180%;
+    cursor: pointer;
+}
+.tablet .top, .tablet .middle {
+    margin-bottom: 10px;
+}
+.tablet .middle .search_bar {
+    width: 90%;
+}
+.tablet .bottom {
+    display: flex;
+    justify-content: space-between;
+}
 .jumbo_top {
     height: 62px;
     color: #c7d6c7;
@@ -196,6 +223,7 @@ header {
 }
 .wrapper_jumbo > div {
     width: calc(100% / 3);
+    margin: 0 10px;
 }
 .jumbo_top i, .jumbo_top span > span, .banner_text, .new_arrivals_banner {
     color: white;
@@ -237,9 +265,6 @@ header {
 .jumbo_bottom_text {
     font-size: 130%;
 }
-.jumbo_bottom_text span {
-    margin: 0 20px;
-}
 .jumbo_bottom_text a {
     color: #c7d6c7;
     margin: 0 10px;
@@ -249,6 +274,7 @@ header {
 }
 .jumbo_food_img {
     height: 100%;
+    margin: 0 20px;
 }
 .jumbo_food_img img {
     height: 120px;
@@ -262,11 +288,12 @@ header {
 }
 .cards {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     margin: 60px 0;
 }
 .card {
-    max-width: calc(100% / 4 - 20px);
+    width: calc(100% / 4 - 20px);
     margin: 0 10px;
     display: flex;
     flex-direction: column;
@@ -289,6 +316,8 @@ header {
 }
 .big_cards {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     margin: 80px 0;
 }
 .food_card {
@@ -351,6 +380,7 @@ header {
 }
 .items_cards_bottom {
     display: flex;
+    flex-wrap: wrap;
     margin: 80px 0;
 }
 .items_text span {
@@ -434,6 +464,7 @@ header {
 }
 .wrapper_testimonials {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     padding: 80px 0;
 }
@@ -495,6 +526,7 @@ header {
 }
 .blog_items {
     display: flex;
+    flex-wrap: wrap;
     margin: 50px 0;
 }
 .blog_item {
@@ -540,6 +572,7 @@ header {
     width: 100%;
     height: 30vw;
     display: flex;
+    flex-wrap: wrap;
     margin-top: 80px;
 }
 .banner_left {
@@ -568,15 +601,21 @@ header {
 }
 .accessories_icons {
     width: 100%;
-    height: 250px;
+    min-height: 250px;
     background-color: #1f3821;
     background-image: url(../img/bg-transparent-3.png);
     background-repeat: repeat-x;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
 }
-.accessories_icons > div {
+.accessories_icons .w50 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.accessories_icons .w50 > div {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -587,7 +626,8 @@ header {
 }
 .accessories_icons span {
     color: #9ca59d;
-    margin-top: 20px;
+    margin: 20px 10px 0 10px;
+    text-align: center;
 }
 #new_products {
     padding: 80px 0;
@@ -668,6 +708,7 @@ footer a, footer a:hover, .footer_nav a, .footer_nav a:hover {
     background-repeat: repeat-x;
     border-radius: 5px;
     padding: 30px;
+    min-width: 270px;
 }
 .small_newsletter input, .small_newsletter button {
     width: 100%;
@@ -702,7 +743,9 @@ footer a, footer a:hover, .footer_nav a, .footer_nav a:hover {
 .copyrights {
     width: 100%;
     height: 80px;
-    line-height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: black;
     font-size: 80%;
 }
@@ -763,4 +806,108 @@ footer a, footer a:hover, .footer_nav a, .footer_nav a:hover {
 }
 .chevron_up a {
     color: #e0e0e0;
+}
+@media screen and (max-width: 1100px) {
+    #jumbotron .banner_text {
+        width: 70%;
+    }
+    .food_card {
+        width: calc(100% / 2 - 10px);
+        margin-bottom: 10px;
+    }
+    .newsletter {
+        height: auto;
+        background-color: white;
+        background-image: none;
+        padding: 50px;
+    }
+    .newsletter_text {
+        width: 100%;
+    }
+    .newsletter_email input {
+        width: 50%;
+        margin-bottom: 10px;
+    }
+    .blog_item {
+        margin-bottom: 10px;
+    }
+    .blog_item, .new_products_items .item_card {
+        width: calc(100% / 2 - 20px);
+    }
+    .footer_top {
+        flex-wrap: wrap;
+    }
+    .footer_top > div {
+        width: calc(100% / 2);
+    }
+    footer .newsletter_email input {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 770px) {
+    body {
+        margin-top: 150px;
+    }
+    .header_top, .header_bottom {
+        display: none;
+    }
+    .tablet {
+        display: block;
+    }
+    .jumbo_top {
+        height: 100px;
+    }
+    .jumbo_top, #jumbotron .banner_text {
+        font-size: 90%;
+    }
+    #jumbotron .banner_text, .wrapper_jumbo_bottom, .food_card, .accessories_icons .w50, .new_products_items .item_card {
+        width: 100%;
+    }
+    .card {
+        width: calc(100% / 2 - 20px);
+        margin-bottom: 10px;
+    }
+    .new_arrivals_banner {
+        height: auto;
+        padding: 20px;
+    }
+    .items_cards_bottom .item_card {
+        width: calc(100% / 2 - 20px);
+        margin-bottom: 10px;
+    }
+    .user {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+    .accessories_banners {
+        height: auto;
+    }
+    .banner_left, .banner_right {
+        width: 100%;
+        padding: 20px;
+    }
+    .accessories_icons {
+        padding: 20px 0;
+    }
+    .footer_top {
+        text-align: center;
+    }
+    .footer_top > div {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+@media screen and (max-width: 500px) {
+    .jumbo_bottom_text {
+        font-size: 90%;
+    }
+    .newsletter_email input, .newsletter_email button, .card, .blog_item, .items_cards_bottom .item_card {
+        width: 100%;
+    }
+    .nav {
+        flex-wrap: wrap;
+    }
+    .nav li {
+        padding: 0 10px;
+    }
 }
